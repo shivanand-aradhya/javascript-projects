@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(129, 212, 250), rgb(165, 214, 167));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: cursive;
+}
+
+.input-div {
+    display: flex;
+    background-color: rgb(240, 242, 245);
+    border-radius: 30px;
+    margin-bottom: 5px;
+}
+
+.todo {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 30px;
+    min-height: 40%;
+    box-shadow: 1px 1px 12px 1px rgb(0, 0, 0, 0.5); 
+}
+
+#todo-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.add-btn {
+    width: 20%;
+    padding: 25px 0;
+    border-radius: 30px;
+    right: 0;
+    border: 0;
+    outline: 0;
+    background-color: rgb(255, 112, 67);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding: 20px 50px 0;
+    position: relative;
+    user-select: none;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    left: 5px;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+}
+
+li.checked {
+    text-decoration: line-through;
+}
+
+li.checked::before {
+    background-image: url(./images/checked.png);
+}
+
+li span {
+    float: right;
+    font-size: 30px;
+    opacity: 0.5;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    text-align: center;
+    width: 32px;
+    border-radius: 50%;
+}
+
+li span:hover {
+    background-color: rgb(215, 217, 219);
+}
+
+.error {
+    color: rgb(220, 53, 69);
+    visibility: hidden;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    display: block;
+}
