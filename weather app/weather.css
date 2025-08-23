@@ -15,6 +15,10 @@
   align-items: center;
   padding-top: 20vh;
 }
+.container h1 {
+  font-family: cursive;
+  padding-bottom: 20px;
+}
 .container .weather-wrapper {
   background: linear-gradient(135deg, #4facfe, #00f2fe);
   width: 35%;
